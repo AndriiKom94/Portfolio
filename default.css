@@ -16,11 +16,29 @@ html, body{
 
 h1, h2, h3, h4, h5, h6, strong{
     color: var(--mainText);
+    font-family: 'Roboto Mono', monospace;
 }
 
 p, li, span, label, input, textarea{
     color: var(--secondaryText);
+    font-family: 'Roboto Mono', monospace;
 }
+
+a{
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{font-size: 56px;}
+h2{font-size: 36px;}
+h3{font-size: 28px;}
+h4{font-size: 24px;}
+h5{font-size: 20px;}
+h6{font-size: 16px;}
 
 .s1{
     background-color: var(--mainColor);
@@ -37,4 +55,49 @@ p, li, span, label, input, textarea{
 .main-container{
     width: 1200px;
     margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    border: 2px dashed lightcoral;
+    min-height: 10em;
+}
+
+.intro-wrapper{
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+
+    -webkit-box-shadow: 8px -2px 15px 5px rgba(0,0,0,0.62); 
+    box-shadow: 8px -2px 15px 5px rgba(0,0,0,0.62);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em;
+    grid-template-areas: 
+        'nav-wrapper nav-wrapper'
+        'left-column right-column'
+    ;
+}
+
+.nav-wrapper{
+    grid-area: nav-wrapper;
+    border: 1px dashed lightcoral;
+}
+
+.left-column{
+    grid-area: left-column;
+    border: 1px dashed lightcoral;
+}
+
+.right-column{
+    grid-area: right-column;
+    border: 1px dashed lightcoral;
+}
+
+@media screen and (max-widtg: 1200px){
+    .main-container{
+        width:95%;
+    }
 }
