@@ -21,6 +21,10 @@ html, body{
     margin: 0;
 }
 
+body *{
+    transition: 0.3s;
+}
+
 h1, h2, h3, h4, h5, h6, strong{
     color: var(--mainText);
     font-family: 'Roboto Mono', monospace;
@@ -97,6 +101,10 @@ h6{font-size: 16px;}
     background-color: var(--mainColor);
     border-radius: 5px 5px 0 0;
 
+}
+
+#navigation a{
+    color:var(--mainText)
 }
 
 #navigation{
@@ -314,6 +322,19 @@ h6{font-size: 16px;}
 .post-intro{
     color: #4b5156;
     font-size: 14px;
+}
+
+.certificates{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.d-block {
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: -3px 1px 3px -1px rgba(0,0,0,0.60);
+    -moz-box-shadow: -3px 1px 3px -1px rgba(0,0,0,0.60);
+    box-shadow: -3px 1px 3px -1px rgba(0,0,0,0.60);
 }
 
 #contact-form{
