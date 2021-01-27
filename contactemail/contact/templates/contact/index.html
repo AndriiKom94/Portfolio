@@ -19,6 +19,16 @@
     
     <section class="s1">
         <div class="main-container">
+            {% if message_name %}
+            <br><br>
+            <center>
+                <h2>Thanks {{ message_name }}!</h2>
+                <p>I'll get in touch with you as soon as possible</p>
+            </center>
+            <br><br>
+            {%else%}
+            {%endif%}
+
             <div class="greeting-wrapper">
                 <h1>Hi, I'm Andrii Komarenets</h1>
             </div>
@@ -57,7 +67,7 @@
                         <div id="preview">
                             <div id="corner-tl" class="corner"></div>
                             <div id="corner-tr" class="corner"></div>
-                            <h3>Who I am?</h3>
+                            <h3>Who am I?</h3>
                             <p>I am junior Python/Django developer.</p>
                             <div id="corner-bl" class="corner"></div>
                             <div id="corner-br" class="corner"></div>
@@ -201,13 +211,13 @@
                 {% csrf_token %}
 
                 <label>Name</label>
-                <input class="input-field" type="text" name="name">
+                <input class="input-field" type="text" name="message_name">
 
                 <label>Subject</label>
-                <input class="input-field" type="text" name="subject">
+                <input class="input-field" type="text" name="message_subject">
 
                 <label>Email</label>
-                <input class="input-field" type="text" name="email">
+                <input class="input-field" type="text" name="message_email">
 
                 <label>Message</label>
                 <textarea class="input-field" type="text" name="message"></textarea>

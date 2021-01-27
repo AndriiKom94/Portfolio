@@ -126,9 +126,12 @@ STATIC_URL = '/static/'
 
 # Email settings
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'andrii.kom@ukr.net'
+SERVER_EMAIL = 'andrii.kom@ukr.net'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ukr.net'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'andrii.kom@ukr.net'
+EMAIL_HOST_PASSWORD = 'A1gDKXIKGfm6N6Om'
 EMAIL_USE_TLS = False
-#EMAIL_USE_SSL = False
+EMAIL_USE_SSL = True
