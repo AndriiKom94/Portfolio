@@ -2,8 +2,7 @@ from django.shortcuts import render
 from django.core.mail import send_mail
 
 
-
-def home (request):
+def home(request):
     if request.method == "POST":
         message_name = request.POST.get('message_name')
         message_email = request.POST.get('message_email')
@@ -22,3 +21,15 @@ def home (request):
 
     else:
         return render(request, 'contact/index.html', { })
+
+
+def scrapy(request):
+    return render(request, 'contact/scrapy.html')
+
+
+def ecommerce(request):
+    return render(request, 'contact/ecommerce.html')
+
+
+def excel(request):
+    return render(request, 'contact/excel.html')
