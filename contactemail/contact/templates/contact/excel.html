@@ -37,7 +37,7 @@
                 <div class="left-column">
                     <h3>Was used mostly for parsing of data from different online shops (like OLX) in order to receive full  information about certain object. The subject of the search can be various, depending on what the client wants to buy. With this type of search the client can compare the prices or the other parameters of the researched object that he might be interested in. The tools of Python and Scrapy have been used in this project.</h3>
                     <br>
-                    <h4>You can see code <a target='_blank' href="https://github.com/AndriiKom94/scrapy">here</a></h4>
+                    <h4>You can see code <a target='_blank' href="https://github.com/AndriiKom94/Word">here</a></h4>
                 </div>
                 <div class="right-column">
                     <img src="{% static 'images/excel.png'%}"  style="height: 450px; width: 450px; margin: auto; border-radius: 5px;" alt="">
@@ -49,7 +49,8 @@
         <div class="main-container">
             <h3 id="mail" style="text-align: center;">Get In Touch</h3>
 
-            <form id="contact-form" action="">
+            <form id="contact-form" action="{% url 'home' %}" method="post">
+                {% csrf_token %}
                 <label>Name</label>
                 <input class="input-field" type="text" name="name">
 
