@@ -13,7 +13,7 @@ def home(request):
             message_subject,
             'Name: '+ message_name + '\nEmail: ' + message_email + '\n' + message,
             'andrii.kom@ukr.net',
-            ['andrii.kom@ukr.net', 'andrii.kom94@gmail.com'],
+            ['andrii.kom@ukr.net'],
             fail_silently=False,
         )
 
